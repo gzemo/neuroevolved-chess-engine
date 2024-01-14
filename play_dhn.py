@@ -207,12 +207,8 @@ def play_tournament(number_of_matches, netlist):
 	allplayers = (list(range(0,len(netlist))))
 	np.random.shuffle(allplayers)
 	allplayers.extend(allplayers[0:number_of_matches])
-
-	#matches = [(i, allplayers[(i+1) : (i+number_of_matches+1)]) for i in range(POPSIZE)]
-
+	
 	# save all combination of matches
-	#combinations = [[ (matches[i][0], matches[i][1][j]) for j in range(len(matches[i][1])) ] for i in range(len(matches))]
-
 	combinations = []
 	for i in range(0, len(allplayers)-number_of_matches):
 		tmp = []
@@ -242,34 +238,11 @@ def eval_fitness(genomes, config):
 	Fitness function.
 	For each genome evaluate its fitness, in this case, as the mean squared error.
 	"""
-	# netlist = []
-
-	# for _, genome in genomes:
-
-		## NEAT
-		# net = neat.nn.FeedForwardNetwork.create(genome, config)
-
-		## hyperNEAT	
-		# cppn = neat.nn.FeedForwardNetwork.create(genome, config)
-		# net = create_phenotype_network(cppn, SUBSTRATE)
-
-		## EShyperNEAT
-		# cppn = neat.nn.FeedForwardNetwork.create(genome, config)
-		# network = ESNetwork(SUBSTRATE, cppn, DYNAMIC_PARAMS)
-		# net = network.create_phenotype_network()
-
-		# test
-		#print(net.activate(tuple(np.random.uniform(-20,20,size=64).astype(float))), end=" - ")
-		
-		# netlist.append(net)
-
 	indexlist = [i for i, _ in genomes][-POPSIZE:]
 	netlist   = [neat.nn.FeedForwardNetwork.create(genome, config) for _, genome in genomes]
 
 	assert len(netlist) == POPSIZE, "Too much offsprings generated from past iteration!"
 	
-	# new_fitness = np.random.randint(0, 8, size = len(netlist)).astype(float).tolist()
-
 	new_fitness = play_tournament(NUMBER_OF_MATCHES, netlist)
 
 	print(" *** Total amount of genomes:", max([i for i, _ in genomes]))
@@ -297,8 +270,8 @@ def run(pop, gens):
 	pop.add_reporter(neat.Checkpointer(1))
 
 	# ES hyper NEAt
-	#global DYNAMIC_PARAMS
-	#DYNAMIC_PARAMS = params(version)
+	# global DYNAMIC_PARAMS
+	# DYNAMIC_PARAMS = params(version)
 
 	winner = pop.run(eval_fitness, gens)
 	return winner, stats	
@@ -307,8 +280,6 @@ def run(pop, gens):
 if __name__ == "__main__":
 
 	t0total = time.time()
-
-	# provide all necessary things for the configuration 
 
 	# collect past generation if any (previous progress):
 	last_checkpoint = get_last_checkpoints(DIRECTORY, "neat-checkpoint")
