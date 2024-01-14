@@ -14,11 +14,6 @@ from coevolve import SynapticPopulation
 import pickle
 import neat
 import neat.nn
-#from pureples.shared.substrate import Substrate
-#from pureples.shared.visualize import draw_net
-#from pureples.hyperneat.hyperneat import create_phenotype_network
-#from pureples.es_hyperneat.es_hyperneat import ESNetwork
-
 
 #-----------------------------------------------------------
 GENERATIONS = 1
@@ -28,52 +23,6 @@ TIME_LIM = 3000
 NUMBER_OF_MATCHES = 3
 DIRECTORY = "."
 #-----------------------------------------------------------
-
-# # hyperneat params -----------------------------------------
-# # S, M or L; Small, Medium or Large (logic implemented as "Not 'S' or 'M' then Large").
-# VERSION = "M"
-# VERSION_TEXT = "small" if VERSION == "S" else "medium" if VERSION == "M" else "large"
-
-# # Create input layer coordinate map from specified input dimensions
-# input_dimensions = [1, 64]
-# x = np.linspace(-1.0, 1.0, input_dimensions[1]) if (input_dimensions[1] > 1) else [0.0]
-# y = np.linspace(-1.0, 1.0, input_dimensions[0]) if (input_dimensions[0] > 1) else [-1.0]
-# INPUT_COORDINATES = list(it.product(x,y))
-
-# hidden_dimension = [1, 128]
-# x = np.linspace(-1.0, 1.0, hidden_dimension[1]) if (hidden_dimension[1] > 1) else [0.0]
-# y = np.linspace(-1.0, 1.0, hidden_dimension[0]) if (hidden_dimension[0] > 1) else [0.0]
-# HIDDEN_COORDINATES = [list(it.product(x,y))]
-
-# OUTPUT_COORDINATES = [(0.0, 1.0)]
-# ACTIVATIONS = len(HIDDEN_COORDINATES) + 2
-
-# SUBSTRATE = Substrate(
-#     INPUT_COORDINATES, OUTPUT_COORDINATES, HIDDEN_COORDINATES)
-
-# # for EShyperNEAT (avoid specifying the hidden node)
-# #SUBSTRATE = Substrate(INPUT_COORDINATES, OUTPUT_COORDINATES)
-# #-----------------------------------------------------------
-
-
-# # ES hyperneat params --------------------------------------
-
-# NUMBER_OF_MATCHES = 1
-
-# def params(version):
-# 	"""
-# 	ES-HyperNEAT specific parameters.
-# 	"""
-# 	return {"initial_depth": 0 if version == "S" else 1 if version == "M" else 2,
-# 		"max_depth": 1 if version == "S" else 2 if version == "M" else 3,
-# 		"variance_threshold": 0.03,
-# 		"band_threshold": 0.3,
-# 		"iteration_level": 1,
-# 		"division_threshold": 0.5,
-# 		"max_weight": 5.0,
-# 		"activation": "sigmoid"}
-
-# DYNAMIC_PARAMS = params(VERSION)
 
 # Config for CPPN.
 CONFIG = neat.config.Config(neat.genome.DefaultGenome, neat.reproduction.DefaultReproduction,
@@ -268,10 +217,6 @@ def run(pop, gens):
 	pop.add_reporter(neat.statistics.StatisticsReporter())
 	pop.add_reporter(neat.reporting.StdOutReporter(True))
 	pop.add_reporter(neat.Checkpointer(1))
-
-	# ES hyper NEAt
-	# global DYNAMIC_PARAMS
-	# DYNAMIC_PARAMS = params(version)
 
 	winner = pop.run(eval_fitness, gens)
 	return winner, stats	
