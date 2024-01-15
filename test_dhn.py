@@ -12,6 +12,7 @@ import neat
 import neat.nn
 
 # stockfish
+STOCKFISH_PATH = "" # path to Stockfish executable
 STOCKFISH_ELO = 400
 STOCKFISH_TIME_LIM = 50
 TRIALS = 6 # number of matches to test again stockfish
@@ -37,13 +38,11 @@ CONFIG = neat.config.Config(neat.genome.DefaultGenome, neat.reproduction.Default
 							'./config_neat')
 
 
-
 def initialize_stockfish(stockfish_elo):
 	"""
 	initialize the stockfish engine according
 	"""
-	stockfish_path = "./stockfish/stockfish-ubuntu-x86-64-avx2"
-	stockfish = Stockfish(path=stockfish_path,
+	stockfish = Stockfish(path=STOCKFISH_PATH,
 		depth = 4,
 		parameters = {"Threads": 1, "Hash": 0})
 	stockfish.set_elo_rating(stockfish_elo)
@@ -142,8 +141,7 @@ def test_single(uci, stockfish, isWhiteEvo, printBoard=False):
 		print(f"Win due to material value difference: {result} {diff}")
 
 	e = time.time()
-	#print(f"Total execution time (sec): {round(e-s,2)}")
-	#print(uci.board)
+	print(f"Total execution time (sec): {round(e-s,2)}")
 
 	return {"evo_player_result":result[0] if isWhiteEvo else result[1],
 			"stockfish_result" :result[1] if isWhiteEvo else result[0],
