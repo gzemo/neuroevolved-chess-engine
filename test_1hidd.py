@@ -142,8 +142,7 @@ def test_single(uci, stockfish, isWhiteEvo, printBoard=False):
 		
 
 	e = time.time()
-	#print(f"Total execution time (sec): {round(e-s,2)}")
-	#print(uci.board)
+	print(f"Total execution time (sec): {round(e-s,2)}")
 
 	return {"evo_player_result":result[0] if isWhiteEvo else result[1],
 			"stockfish_result" :result[1] if isWhiteEvo else result[0],
@@ -265,8 +264,6 @@ if __name__=="__main__":
 
 	PAST_SYN  = f"{DIRECTORY}/pop{POPSIZE}_n{SINGLE_LAYER_N_NODES[0]}_m{NUMBER_OF_MATCHES}_d{MAX_DEPTH}_t{TIME_LIM}_g{PAST_GEN}_synapses.npy"
 	PAST_BIAS = f"{DIRECTORY}/pop{POPSIZE}_n{SINGLE_LAYER_N_NODES[0]}_m{NUMBER_OF_MATCHES}_d{MAX_DEPTH}_t{TIME_LIM}_g{PAST_GEN}_bias.npy"
-
-	#best_player_idx = retrieve_best_player(PAST_GEN)
 
 	sp = initialize_syn_pop(POPSIZE, SINGLE_LAYER_N_NODES, PAST_SYN, PAST_BIAS, WEIGHT_METHOD)
 
