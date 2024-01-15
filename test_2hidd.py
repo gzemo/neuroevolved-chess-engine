@@ -10,10 +10,10 @@ from coevolve import SynapticPopulation
 from best_player_2hidd import initialize_syn_pop
 
 # stockfish
+STOCKFISH_PATH = "" # path to Stockfish executable
 STOCKFISH_ELO = 400
 STOCKFISH_TIME_LIM = 50
 TRIALS = 6 # number of matches to test again stockfish
-STOCKFISH_PATH = "" # path to Stockfish executable
 
 # UCI TEST engine params
 TEST_DEPTH = 4
