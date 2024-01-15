@@ -13,6 +13,7 @@ from best_player_1hidd import initialize_syn_pop
 STOCKFISH_ELO = 400
 STOCKFISH_TIME_LIM = 50
 TRIALS = 6 # number of matches to test again stockfish
+STOCKFISH_PATH = "" # path to the stockfish executable
 
 # UCI TEST engine params
 TEST_DEPTH = 4
@@ -35,8 +36,7 @@ def initialize_stockfish(stockfish_elo):
 	"""
 	initialize the stockfish engine according
 	"""
-	stockfish_path = "./stockfish/stockfish-ubuntu-x86-64-avx2"
-	stockfish = Stockfish(path=stockfish_path,
+	stockfish = Stockfish(path=STOCKFISH_PATH,
 		depth = 4,
 		parameters = {"Threads": 1, "Hash": 0})
 	stockfish.set_elo_rating(stockfish_elo)
