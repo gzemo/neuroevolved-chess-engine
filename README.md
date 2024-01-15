@@ -16,3 +16,4 @@ An attempt to evolve a chess engine tuning chess evaluation functions evolved by
 # Tested with:
 * Python 3.10
 * Ubuntu 22.04 LTS
+* Stockfish v.16
