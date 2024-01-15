@@ -4,7 +4,7 @@ An attempt to evolve a chess engine tuning chess evaluation functions evolved by
 
 # How to test:
 1. Install all required libraries in a dedicated python 3.10 environment by: `pip install -r requirements.txt`
-2. Gather and install a Stockfish executable chess engine in your local machine: (https://stockfishchess.org/)
+2. Download and install a Stockfish executable chess engine in your local machine: (https://stockfishchess.org/)
 3. Adapt the `STOCKFISH_PATH` global var pointing at to your local Stockfish file.
 4. Run `visual_test.ipynb`
  
