@@ -18,14 +18,14 @@ Three architectures had been evolved for 200 generations:
 ```shell
 python test_1hidd.py 150
 ```
-Available (25,50,75,100,125,150,175,200)
+Generations available (25, 50, 75, 100, 125, 150, 175, 200)
 
 ---
 
 ## Visual assessment:
 - Adapt the `STOCKFISH_PATH` global var pointing at to your local Stockfish file in `visual_test.ipynb` and execute the codecell.
 
-Currently, you can test only the 1 hidden layer architecture by specifying the `PAST_GEN` generation
+Currently, you can test only the 1 hidden layer architecture by specifying the `PAST_GEN` generation.
 
 ---
 
