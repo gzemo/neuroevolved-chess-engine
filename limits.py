@@ -1,3 +1,6 @@
+# Credits:
+# Disservin: https://github.com/Disservin/python-chess-engine/tree/master
+
 class Limits:
     def __init__(
         self,
