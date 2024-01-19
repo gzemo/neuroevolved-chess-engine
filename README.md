@@ -13,7 +13,7 @@ Three architectures had been evolved for 200 generations:
 1. Install all required libraries in a dedicated python 3.10 environment by: `pip install -r requirements.txt`.
 2. Download and install a Stockfish executable chess engine in your local machine: (https://stockfishchess.org/).
 3. Choose the `PAST_GEN` generation to be tested by modifying the global var.
-4. Adapt the `STOCKFISH_PATH` global var pointing at to your local Stockfish file in `test_*.py` and files if you want to test the engine against Stockfish: results will be saved in `/evaluation/stockfish_eval.csv` if playing with `_1hidd` or `_2hidd` versions otherwise if you need to test NEAT based chess engine, results will be stored in `/evaluation/stockfish_eval_neat.csv`. You can run the testing procedure by specifying the number of the generation to be tested:
+4. Adapt the `STOCKFISH_PATH` global var pointing at to your local Stockfish file in `test_*.py` and files if you want to test the engine against Stockfish: results will be saved in `/evaluation/stockfish_eval.csv` if playing with `_1hidd` or `_2hidd` versions otherwise if you need to test NEAT based chess engine, run `test_dhn.py`: results will be stored in `/evaluation/stockfish_eval_neat.csv`. You can run the testing procedure by specifying the number of the generation to be tested:
 
 ```shell
 python test_1hidd.py 150
