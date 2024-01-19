@@ -352,22 +352,3 @@ class UCI_EShypNEAT:
                 bestmove = self.thread.join()
 
                 return bestmove
-
-# np.random.seed(111)
-
-# hnode = [128]
-
-# subgeno_p1 = np.random.uniform(-1,1, size = (hnode[0]*64+hnode[0]))
-# bias_geno_p1 = np.random.uniform(-1, 1, size = hnode[0])
-# subgeno_p2 = np.random.uniform(-1,1, size = (hnode[0]*64+hnode[0]))
-# bias_geno_p2 = np.random.uniform(-1, 1, size = hnode[0])
-
-# uci = UCI(4,3000,subgeno_p1, bias_geno_p1, subgeno_p2, bias_geno_p2, hnode)
-
-# #uci.processCommand("go")
-# c = 0
-# while True:
-#     print(f"{'-'*80},\n turn: {c}")
-#     uci.board.push(uci.processCommand("go"))
-#     print(uci.board)
-#     c += 1
