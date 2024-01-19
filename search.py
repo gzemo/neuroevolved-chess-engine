@@ -1,3 +1,6 @@
+# Credits:
+# Disservin: https://github.com/Disservin/python-chess-engine/tree/master
+
 import time
 import tt as TT
 import evaluation as Eval
