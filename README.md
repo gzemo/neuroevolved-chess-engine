@@ -1,4 +1,4 @@
-# Neuroevolved chess engine:
+# Neuroevolved Chess Engine:
 
 An attempt to evolve a chess engine tuning chess evaluation functions evolved by Neuroevolution frameworks (CoSyNE and NEAT). 
 
