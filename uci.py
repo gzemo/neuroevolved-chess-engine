@@ -1,3 +1,6 @@
+# Credits:
+# Disservin: https://github.com/Disservin/python-chess-engine/tree/master
+
 import search as Search
 import evaluation as Eval
 from helpers import *
