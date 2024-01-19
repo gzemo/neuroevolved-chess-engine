@@ -2,6 +2,11 @@
 
 An attempt to evolve a chess engine tuning chess evaluation functions evolved by Neuroevolution frameworks (CoSyNE and NEAT). 
 
+Three architectures had been evolved for 200 generations:
+1. CoSyNE based fixed topology: 1 hidden layer architecture n = {64, 128, 1}.
+2. CoSyNE based fixed topology: 2 hidden layer architectures n = {64, 64, 64, 1}.
+3. NEAT based varying network topology: 1 hidden layer architecture n = {64, 128, 1}.
+
 --- 
 
 ## How to test:
@@ -20,7 +25,7 @@ Available (25,50,75,100,125,150,175,200)
 ## Visual assessment:
 - Adapt the `STOCKFISH_PATH` global var pointing at to your local Stockfish file in `visual_test.ipynb` and execute the codecell.
 
-Currently, you can test only the 1 hidden layer architecture
+Currently, you can test only the 1 hidden layer architecture by specifying the `PAST_GEN` generation
 
 ---
 
