@@ -1,3 +1,6 @@
+# Credits:
+# Disservin: python chess engine (https://github.com/Disservin/python-chess-engine/tree/master)
+
 MAX_PLY = 5 # default 60
 
 CHECK_RATE = 256
