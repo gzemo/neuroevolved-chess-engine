@@ -35,7 +35,7 @@ Currently, you can test only the 1 hidden layer architecture by specifying the `
 * [ ] Evolving NEAT virtual players by enforcing elitims (currently disabled)
 * [ ] Visual assessment of 2-hidden layers architecture and NEAT chess based engine
 * [ ] Re-implementing the engine (further implementations improvements to be defined for better performance)
-* [ ] 
+
 ---
 
 # Credits:
