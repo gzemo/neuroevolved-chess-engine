@@ -41,8 +41,8 @@ Currently, you can test only the 1 hidden layer architecture by specifying the `
 ---
 
 # Credits:
-* **Disservin**: python chess engine (https://github.com/Disservin/python-chess-engine/tree/master)
-* **Ilya Zhelyabuzhsky**: Stockfish python API (https://github.com/zhelyabuzhsky/stockfish/tree/master)
+* **Disservin**: python chess engine (GNU GPL-3.0 Licence) (https://github.com/Disservin/python-chess-engine/tree/master)
+* **Ilya Zhelyabuzhsky**: Stockfish python API (MIT Licence) (https://github.com/zhelyabuzhsky/stockfish/tree/master)
 * **Official Stockfish** (GNU GPL-3.0 Licence): (https://github.com/official-stockfish/Stockfish)
 
 # Tested with:
