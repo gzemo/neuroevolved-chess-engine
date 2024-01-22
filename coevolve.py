@@ -2,9 +2,6 @@ import time
 import random
 import numpy as np
 
-# in future you'll need an function that initialize the synapses according to the number of 
-# input you pass in !!!
-
 class SynapticPopulation:
 	"""
 	Handling the representation and evolution of the synaptic population
