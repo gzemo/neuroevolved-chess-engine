@@ -3,9 +3,9 @@
 An attempt to evolve a chess engine tuning chess evaluation functions evolved by Neuroevolution frameworks (CoSyNE and NEAT). 
 
 Three architectures had been evolved for 200 generations:
-1. CoSyNE based fixed topology: 1 hidden layer architecture `n = {64, 128, 1}`.
-2. CoSyNE based fixed topology: 2 hidden layer architectures `n = {64, 64, 64, 1}`.
-3. NEAT based varying network topology: 1 hidden layer architecture `n = {64, 128, 1}`.
+1. CoSyNE-based fixed topology: 1 hidden layer architecture `n = {64, 128, 1}`.
+2. CoSyNE-based fixed topology: 2 hidden layer architectures `n = {64, 64, 64, 1}`.
+3. NEAT-based varying network topology: 1 hidden layer architecture `n = {64, 128, 1}`.
 
 The project is still *under development*: Neuroevolved virtual players have partially learned the optimization task and more work is needed in order to have them fully able to play properly.
 
