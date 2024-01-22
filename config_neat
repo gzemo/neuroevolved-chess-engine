@@ -1,5 +1,3 @@
-#--- parameters for the CPPN related to the XOR experiment  ---#
-
 [NEAT]
 fitness_criterion     = max
 fitness_threshold     = 100
