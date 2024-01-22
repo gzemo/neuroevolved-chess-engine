@@ -74,7 +74,6 @@ class CoevEvoEvaluation:
             hnode: (list) of integers representing how many hidden nodes are for each layer
             [128, 32] (two layers, 128 and 32 hiddend nodes respectively)
         Return a list of matrix(es) of the corresponding weights 
-            !!! biases are not implemented
         """
         weights, biases = [], []
 
@@ -223,20 +222,3 @@ class EShyperNEATEvaluation:
         functional = net.activate(EShyperNEATEvaluation._fen2vect(board))[0]
 
         return material + functional
-
-
-
-
-
-# import chess
-# b = chess.Board()
-
-# np.random.seed(0)
-# weig = np.random.uniform(-1,1, size = (64*128+128))
-# bia = np.random.uniform(-1,1, size = 128)
-
-# print(weig)
-# c = CoevEvoEvaluation() 
-# weights, biases = c._subgeno2mat(c._fen2vect(b), weig,bia, [128])
-# c.eval_NN(b, weig, bia, [128])
-
