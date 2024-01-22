@@ -1,3 +1,6 @@
+# Credits:
+# Disservin: https://github.com/Disservin/python-chess-engine/tree/master
+
 from helpers import *
 from psqt import *
 
